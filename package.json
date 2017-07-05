@@ -8,18 +8,8 @@
   "bugs": "https://github.com/colisweb/cwtools/issues",
   "main": "lib/index.js",
   "bin": "lib/cli.js",
-  "files": [
-    "lib"
-  ],
-  "keywords": [
-    "changelog",
-    "publish",
-    "push",
-    "version",
-    "bump",
-    "commit",
-    "colisweb"
-  ],
+  "files": ["lib"],
+  "keywords": ["changelog", "publish", "push", "version", "bump", "commit", "colisweb"],
   "scripts": {
     "lint": "cwformat",
     "test": "jest",
@@ -29,7 +19,7 @@
   "dependencies": {
     "any-observable": "^0.2.0",
     "conventional-changelog-cli": "^1.2.0",
-    "conventional-changelog-colisweb": "^1.0.0",
+    "conventional-changelog-colisweb": "^1.0.1",
     "conventional-recommended-bump": "^0.3.0",
     "del": "^2.2.2",
     "execa": "^0.5.0",

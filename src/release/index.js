@@ -16,11 +16,27 @@ import getReleaseTasks from './release-tasks'
  *
  */
 function getChangelogPresetConfig(presetName) {
-  const changelogPresetConfig =
+  let changelogPresetConfig =
     requireSafely(`conventional-changelog-${presetName}`) || requireSafely(presetName)
+
+  if (changelogPresetConfig && changelogPresetConfig.default) {
+    changelogPresetConfig = changelogPresetConfig.default
+  }
+
+  if (!changelogPresetConfig) {
+    try {
+      changelogPresetConfig = require(`conventional-changelog-${presetName}`) || require(presetName)
+    } catch (error) {
+      throw new Error('Invalid changelog preset.')
+    }
+  }
 
   if (!changelogPresetConfig) {
     throw new Error('Invalid changelog preset.')
+  }
+
+  if (changelogPresetConfig && changelogPresetConfig.default) {
+    changelogPresetConfig = changelogPresetConfig.default
   }
 
   return Promise.resolve(changelogPresetConfig)

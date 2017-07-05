@@ -39,7 +39,7 @@ export default function getReleaseTasks(props = {}) {
       skip: () => !changelogPresetConfig,
       task: async () => {
         const changelogPath = path.join(path.dirname(pkgPath), 'CHANGELOG.md')
-        await exec('conventional-changelog', [
+        await exec(require.resolve('conventional-changelog-cli/cli.js'), [
           '--infile',
           changelogPath,
           '--same-file',

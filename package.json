@@ -1,6 +1,6 @@
 {
   "name": "cwtools",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "author": "Simon Degrave <simon.degraeve@gmail.com>",
   "repository": "github:colisweb/cwtools",
@@ -8,8 +8,18 @@
   "bugs": "https://github.com/colisweb/cwtools/issues",
   "main": "lib/index.js",
   "bin": "lib/cli.js",
-  "files": ["lib"],
-  "keywords": ["changelog", "publish", "push", "version", "bump", "commit", "colisweb"],
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "changelog",
+    "publish",
+    "push",
+    "version",
+    "bump",
+    "commit",
+    "colisweb"
+  ],
   "scripts": {
     "lint": "cwformat",
     "test": "jest",

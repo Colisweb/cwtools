@@ -1,5 +1,5 @@
 # cwtools
-> colisweb tools for node development
+> Tools for node development
 
 [![NPM Version][npm-img]][npm-link]
 [![Licence][licence-img]][licence-link]

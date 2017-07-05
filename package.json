@@ -1,6 +1,6 @@
 {
   "name": "cwtools",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "author": "Simon Degrave <simon.degraeve@gmail.com>",
   "repository": "github:colisweb/cwtools",
@@ -24,7 +24,7 @@
     "lint": "cwformat",
     "test": "jest",
     "build": "rimraf lib && babel --out-dir lib --ignore *.test.js,__*__ src",
-    "release": "cwtools release"
+    "release": "npm run build && ./lib/cli.js release"
   },
   "dependencies": {
     "any-observable": "^0.2.0",

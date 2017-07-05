@@ -1014,9 +1014,9 @@ conventional-changelog-codemirror@^0.1.0:
   dependencies:
     q "^1.4.1"
 
-conventional-changelog-colisweb@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/conventional-changelog-colisweb/-/conventional-changelog-colisweb-1.0.0.tgz#1ef01f95c4111bfc1e8d81b4c40f2515b0a91d90"
+conventional-changelog-colisweb@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/conventional-changelog-colisweb/-/conventional-changelog-colisweb-1.0.1.tgz#8de3dc6181ce7643cdf29b0b3dd71c9f36dba836"
   dependencies:
     conventional-changelog-core "^1.8.0"
 

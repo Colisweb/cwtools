@@ -2,25 +2,15 @@
   "name": "cwtools",
   "version": "1.0.4",
   "license": "MIT",
-  "descritpion": "Tools for node development",
+  "description": "Tools for node development",
   "author": "Simon Degrave <simon.degraeve@gmail.com>",
   "repository": "github:colisweb/cwtools",
   "homepage": "https://github.com/colisweb/cwtools#readme",
   "bugs": "https://github.com/colisweb/cwtools/issues",
   "main": "lib/index.js",
   "bin": "lib/cli.js",
-  "files": [
-    "lib"
-  ],
-  "keywords": [
-    "changelog",
-    "publish",
-    "push",
-    "version",
-    "bump",
-    "commit",
-    "colisweb"
-  ],
+  "files": ["lib"],
+  "keywords": ["changelog", "publish", "push", "version", "bump", "commit", "colisweb"],
   "scripts": {
     "lint": "cwformat",
     "test": "jest",
@@ -51,7 +41,7 @@
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.6.0",
     "conventional-changelog-angular": "^1.3.0",
-    "eslint-config-colisweb": "^1.0.0",
+    "eslint-config-colisweb": "^1.0.1",
     "execa-jest-mock": "^0.5.0",
     "jest": "^20.0.4",
     "rimraf": "^2.6.1"

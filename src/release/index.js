@@ -15,7 +15,7 @@ import getReleaseTasks from './release-tasks'
 /**
  *
  */
-function getChangelogPresetConfig(presetName = 'colisweb') {
+function getChangelogPresetConfig(presetName) {
   const changelogPresetConfig =
     requireSafely(`conventional-changelog-${presetName}`) || requireSafely(presetName)
 
@@ -49,6 +49,9 @@ async function getReleaseVersion(input, currentVersion, changelogPresetConfig) {
  */
 async function getProps(input, options) {
   const { pkg, path: pkgPath } = await readPkgUp()
+
+  // Force changelog generation
+  options.changelogPreset = options.changelogPreset || 'colisweb'
 
   let changelogPresetConfig
   if (options.changelogPreset) {

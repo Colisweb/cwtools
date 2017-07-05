@@ -29,7 +29,7 @@
   "dependencies": {
     "any-observable": "^0.2.0",
     "conventional-changelog-cli": "^1.2.0",
-    "conventional-changelog-colisweb": "1.0.0",
+    "conventional-changelog-colisweb": "^1.0.0",
     "conventional-recommended-bump": "^0.3.0",
     "del": "^2.2.2",
     "execa": "^0.5.0",

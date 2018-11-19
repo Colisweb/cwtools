@@ -61,8 +61,7 @@ export default function getReleaseTasks(props = {}) {
     {
       title: 'Publishing package',
       skip: () => (pkg.private ? 'Private package: not publishing to npm.' : false),
-      task: () =>
-        execObservable('npm', ['publish'].concat(options.tag ? ['--tag', options.tag] : []))
+      task: () => execObservable('npm', ['publish'].concat(options.tag ? ['--tag', options.tag] : []))
     },
     {
       title: 'Pushing tags',

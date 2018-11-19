@@ -66,7 +66,7 @@ describe('TaskRunner', () => {
 
   it('throws if repository is empty', async () => {
     exec.__setMockResults([
-      ['', "ambiguous argument 'HEAD'", 1] // git rev-parse HEAD
+      ['', 'ambiguous argument \'HEAD\'', 1] // git rev-parse HEAD
     ])
 
     try {

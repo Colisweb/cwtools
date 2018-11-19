@@ -1,15 +1,7 @@
 /**
  *
  */
-export const RELEASE_TYPES = [
-  'major',
-  'minor',
-  'patch',
-  'premajor',
-  'preminor',
-  'prepatch',
-  'prerelease'
-]
+export const RELEASE_TYPES = ['major', 'minor', 'patch', 'premajor', 'preminor', 'prepatch', 'prerelease']
 
 /**
  *

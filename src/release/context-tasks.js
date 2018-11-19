@@ -18,15 +18,11 @@ export default function getContextTasks(props = {}) {
       title: 'Validating version',
       task: () => {
         if (!semver.valid(releaseVersion)) {
-          throw new Error(
-            `Version should be either ${RELEASE_TYPES.join(', ')}, or a valid semver version.`
-          )
+          throw new Error(`Version should be either ${RELEASE_TYPES.join(', ')}, or a valid semver version.`)
         }
 
         if (semver.gte(pkg.version, releaseVersion)) {
-          throw new Error(
-            `New version \`${releaseVersion}\` should be higher than current version \`${pkg.version}\`.`
-          )
+          throw new Error(`New version \`${releaseVersion}\` should be higher than current version \`${pkg.version}\`.`)
         }
 
         if (semver.prerelease(releaseVersion) && !options.tag) {
@@ -76,12 +72,7 @@ export default function getContextTasks(props = {}) {
 
         let hasTag = false
         try {
-          hasTag = !!await exec.stdout('git', [
-            'rev-parse',
-            '--quiet',
-            '--verify',
-            `refs/tags/v${releaseVersion}`
-          ])
+          hasTag = !!(await exec.stdout('git', ['rev-parse', '--quiet', '--verify', `refs/tags/v${releaseVersion}`]))
         } catch (error) {
           // Do nothing
         }
@@ -115,12 +106,7 @@ export default function getContextTasks(props = {}) {
     {
       title: 'Checking remote history',
       task: async () => {
-        const result = await exec.stdout('git', [
-          'rev-list',
-          '--count',
-          '--left-only',
-          '@{u}...HEAD'
-        ])
+        const result = await exec.stdout('git', ['rev-list', '--count', '--left-only', '@{u}...HEAD'])
 
         if (result !== '0') {
           throw new Error('Remote history differs. Please pull changes.')

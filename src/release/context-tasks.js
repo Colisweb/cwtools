@@ -126,17 +126,6 @@ export default function getContextTasks(props = {}) {
           throw new Error('Remote history differs. Please pull changes.')
         }
       }
-    },
-    {
-      title: 'Checking npm user',
-      skip: () => (pkg.private ? 'Private package: not checking npm user.' : false),
-      task: async () => {
-        const owner = getOwner(pkg)
-        const result = (await exec.stdout('npm', ['whoami'])) || null
-        if (result !== owner) {
-          throw new Error(`Invalid npm user. "${result}" should be "${owner}".`)
-        }
-      }
     }
   ]
 }

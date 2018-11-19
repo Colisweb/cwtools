@@ -1,6 +1,6 @@
 {
   "name": "cwtools",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "license": "MIT",
   "description": "Tools for node development",
   "author": "Simon Degrave <simon.degraeve@gmail.com>",

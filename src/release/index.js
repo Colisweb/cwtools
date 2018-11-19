@@ -16,8 +16,7 @@ import getReleaseTasks from './release-tasks'
  *
  */
 function getChangelogPresetConfig(presetName) {
-  let changelogPresetConfig =
-    requireSafely(`conventional-changelog-${presetName}`) || requireSafely(presetName)
+  let changelogPresetConfig = requireSafely(`conventional-changelog-${presetName}`) || requireSafely(presetName)
 
   if (changelogPresetConfig && changelogPresetConfig.default) {
     changelogPresetConfig = changelogPresetConfig.default
@@ -49,8 +48,7 @@ async function getReleaseVersion(input, currentVersion, changelogPresetConfig) {
   let releaseType = input || 'patch'
 
   if (changelogPresetConfig && !input) {
-    releaseType = (await toPromise(getRecommendedBump)({ config: changelogPresetConfig }))
-      .releaseType
+    releaseType = (await toPromise(getRecommendedBump)({ config: changelogPresetConfig })).releaseType
   }
 
   if (RELEASE_TYPES.indexOf(releaseType) === -1) {

@@ -37,7 +37,7 @@
     "listr": "^0.6.1",
     "meow": "^3.7.0",
     "nodent-runtime": "^3.0.1",
-    "pify": "^2.3.0",
+    "pify": "^4.0.1",
     "read-pkg-up": "^2.0.0",
     "repo-utils": "^0.4.1",
     "req-cwd": "^1.0.1",

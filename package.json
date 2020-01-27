@@ -28,7 +28,7 @@
     "release": "npm run build && ./lib/cli.js release"
   },
   "dependencies": {
-    "any-observable": "^0.2.0",
+    "any-observable": "^0.5.1",
     "conventional-changelog-cli": "^1.2.0",
     "conventional-changelog-colisweb": "^1.0.1",
     "conventional-recommended-bump": "^0.3.0",
